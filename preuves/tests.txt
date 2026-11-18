@@ -1,0 +1,93 @@
+### Python 3.15.1
+test_definition_des_marges (test_pert.TestContreLeJuge.test_definition_des_marges)
+Pour chaque tache : retarder de ML ne decale personne, de ML + 1 decale un successeur (ou la fin) ; ... ok
+test_duree_et_dates_au_plus_tot_contre_tous_les_chemins (test_pert.TestContreLeJuge.test_duree_et_dates_au_plus_tot_contre_tous_les_chemins)
+Sur 300 projets au hasard, les dates calculees = le plus long chemin, chemins ecrits un par un. ... ok
+test_le_chemin_critique_a_la_duree_du_projet (test_pert.TestContreLeJuge.test_le_chemin_critique_a_la_duree_du_projet)
+Chaque chemin critique trouve dure exactement la duree du projet. ... ok
+test_dates_et_marges_du_cours (test_pert.TestCours.test_dates_et_marges_du_cours)
+Petit exemple : 8 jours, C a 2 jours de marge, chemin critique A - B - D - E. ... ok
+test_reseau_du_cours (test_pert.TestCours.test_reseau_du_cours)
+Le reseau PERT du cours est juste et ses etapes portent les memes dates. ... ok
+test_deux_taches_du_meme_nom_sont_refusees (test_pert.TestEnonceFaux.test_deux_taches_du_meme_nom_sont_refusees)
+Deux taches A : la premiere serait ecrasee sans rien dire. ... ok
+test_un_cycle_est_refuse (test_pert.TestEnonceFaux.test_un_cycle_est_refuse)
+A avant B et B avant A : l'enonce est impossible. ... ok
+test_une_anteriorite_repetee_est_refusee (test_pert.TestEnonceFaux.test_une_anteriorite_repetee_est_refusee)
+B apres A, A : le chemin critique sortirait deux fois. ... ok
+test_chemin_critique (test_pert.TestExercice.test_chemin_critique)
+Un seul chemin critique : A - B - D - H - I = 3 + 4 + 10 + 4 + 1 = 22. ... ok
+test_niveaux (test_pert.TestExercice.test_niveaux)
+Niveaux 0 : A ; 1 : B C F G ; 2 : D E ; 3 : H ; 4 : I. ... ok
+test_reseau_avec_deux_debuts_ou_deux_fins_est_refuse (test_pert.TestExercice.test_reseau_avec_deux_debuts_ou_deux_fins_est_refuse)
+Une etape 0 qui ne mene qu'a l'etape 2, ou une etape 6 qui ne mene nulle part : erreurs classiques. ... ok
+test_reseau_avec_une_tache_inconnue_est_refuse (test_pert.TestExercice.test_reseau_avec_une_tache_inconnue_est_refuse)
+Une fleche Z ajoutee au bout du reseau : Z n'est pas dans l'enonce. ... ok
+test_reseau_juste_avec_tache_fictive (test_pert.TestExercice.test_reseau_juste_avec_tache_fictive)
+Le reseau du corrige est juste ; l'etape 4 (fin de C) : au plus tot 6, au plus tard 11. ... ok
+test_reseau_qui_ajoute_une_anteriorite_est_refuse (test_pert.TestExercice.test_reseau_qui_ajoute_une_anteriorite_est_refuse)
+Une tache fictive de la fin de C vers le debut de D impose C avant D : l'enonce ne le demande pas. ... ok
+test_reseau_sans_tache_fictive_est_refuse (test_pert.TestExercice.test_reseau_sans_tache_fictive_est_refuse)
+F et G de 2 a 7 sur deux fleches identiques : le juge reclame une tache fictive, et refuse de dater. ... ok
+test_tableau_complet (test_pert.TestExercice.test_tableau_complet)
+Les dates et marges du corrige, ligne par ligne. ... ok
+test_regle_alignee_au_dela_de_100_jours_et_noms_longs (test_pert.TestGantt.test_regle_alignee_au_dela_de_100_jours_et_noms_longs)
+Projet de 120 jours, tache au nom de 6 lettres : la barre commence sous son repere. ... ok
+test_deux_taches_dans_leur_marge_totale_retardent_le_projet (test_pert.TestLePiege.test_deux_taches_dans_leur_marge_totale_retardent_le_projet)
+C + 5 et E + 5, chacune dans sa marge totale de 5 jours : 27 jours au lieu de 22. ... ok
+test_retard_dans_la_marge_libre_ne_decale_rien (test_pert.TestLePiege.test_retard_dans_la_marge_libre_ne_decale_rien)
+E prend 5 jours (sa marge libre) : aucune autre tache ne bouge, le projet fait toujours 22 jours. ... ok
+test_un_jour_de_retard_sur_c_decale_e (test_pert.TestLePiege.test_un_jour_de_retard_sur_c_decale_e)
+C n'a aucune marge libre : 1 jour de retard decale le debut de E de 6 a 7, pas la fin du projet. ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.672s
+
+OK
+
+### Python 3.11
+test_definition_des_marges (test_pert.TestContreLeJuge.test_definition_des_marges)
+Pour chaque tache : retarder de ML ne decale personne, de ML + 1 decale un successeur (ou la fin) ; ... ok
+test_duree_et_dates_au_plus_tot_contre_tous_les_chemins (test_pert.TestContreLeJuge.test_duree_et_dates_au_plus_tot_contre_tous_les_chemins)
+Sur 300 projets au hasard, les dates calculees = le plus long chemin, chemins ecrits un par un. ... ok
+test_le_chemin_critique_a_la_duree_du_projet (test_pert.TestContreLeJuge.test_le_chemin_critique_a_la_duree_du_projet)
+Chaque chemin critique trouve dure exactement la duree du projet. ... ok
+test_dates_et_marges_du_cours (test_pert.TestCours.test_dates_et_marges_du_cours)
+Petit exemple : 8 jours, C a 2 jours de marge, chemin critique A - B - D - E. ... ok
+test_reseau_du_cours (test_pert.TestCours.test_reseau_du_cours)
+Le reseau PERT du cours est juste et ses etapes portent les memes dates. ... ok
+test_deux_taches_du_meme_nom_sont_refusees (test_pert.TestEnonceFaux.test_deux_taches_du_meme_nom_sont_refusees)
+Deux taches A : la premiere serait ecrasee sans rien dire. ... ok
+test_un_cycle_est_refuse (test_pert.TestEnonceFaux.test_un_cycle_est_refuse)
+A avant B et B avant A : l'enonce est impossible. ... ok
+test_une_anteriorite_repetee_est_refusee (test_pert.TestEnonceFaux.test_une_anteriorite_repetee_est_refusee)
+B apres A, A : le chemin critique sortirait deux fois. ... ok
+test_chemin_critique (test_pert.TestExercice.test_chemin_critique)
+Un seul chemin critique : A - B - D - H - I = 3 + 4 + 10 + 4 + 1 = 22. ... ok
+test_niveaux (test_pert.TestExercice.test_niveaux)
+Niveaux 0 : A ; 1 : B C F G ; 2 : D E ; 3 : H ; 4 : I. ... ok
+test_reseau_avec_deux_debuts_ou_deux_fins_est_refuse (test_pert.TestExercice.test_reseau_avec_deux_debuts_ou_deux_fins_est_refuse)
+Une etape 0 qui ne mene qu'a l'etape 2, ou une etape 6 qui ne mene nulle part : erreurs classiques. ... ok
+test_reseau_avec_une_tache_inconnue_est_refuse (test_pert.TestExercice.test_reseau_avec_une_tache_inconnue_est_refuse)
+Une fleche Z ajoutee au bout du reseau : Z n'est pas dans l'enonce. ... ok
+test_reseau_juste_avec_tache_fictive (test_pert.TestExercice.test_reseau_juste_avec_tache_fictive)
+Le reseau du corrige est juste ; l'etape 4 (fin de C) : au plus tot 6, au plus tard 11. ... ok
+test_reseau_qui_ajoute_une_anteriorite_est_refuse (test_pert.TestExercice.test_reseau_qui_ajoute_une_anteriorite_est_refuse)
+Une tache fictive de la fin de C vers le debut de D impose C avant D : l'enonce ne le demande pas. ... ok
+test_reseau_sans_tache_fictive_est_refuse (test_pert.TestExercice.test_reseau_sans_tache_fictive_est_refuse)
+F et G de 2 a 7 sur deux fleches identiques : le juge reclame une tache fictive, et refuse de dater. ... ok
+test_tableau_complet (test_pert.TestExercice.test_tableau_complet)
+Les dates et marges du corrige, ligne par ligne. ... ok
+test_regle_alignee_au_dela_de_100_jours_et_noms_longs (test_pert.TestGantt.test_regle_alignee_au_dela_de_100_jours_et_noms_longs)
+Projet de 120 jours, tache au nom de 6 lettres : la barre commence sous son repere. ... ok
+test_deux_taches_dans_leur_marge_totale_retardent_le_projet (test_pert.TestLePiege.test_deux_taches_dans_leur_marge_totale_retardent_le_projet)
+C + 5 et E + 5, chacune dans sa marge totale de 5 jours : 27 jours au lieu de 22. ... ok
+test_retard_dans_la_marge_libre_ne_decale_rien (test_pert.TestLePiege.test_retard_dans_la_marge_libre_ne_decale_rien)
+E prend 5 jours (sa marge libre) : aucune autre tache ne bouge, le projet fait toujours 22 jours. ... ok
+test_un_jour_de_retard_sur_c_decale_e (test_pert.TestLePiege.test_un_jour_de_retard_sur_c_decale_e)
+C n'a aucune marge libre : 1 jour de retard decale le debut de E de 6 a 7, pas la fin du projet. ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.775s
+
+OK
