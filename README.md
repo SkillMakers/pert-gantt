@@ -1,6 +1,6 @@
 # Méthode PERT et diagramme de Gantt : cours et exercice corrigé
 
-Code de la vidéo **Méthode PERT et diagramme de Gantt : cours et exercice corrigé** de la chaîne
+Code de la vidéo [**Méthode PERT et diagramme de Gantt : cours et exercice corrigé**](https://youtu.be/NyxC21i8ZIU) de la chaîne
 [IT Skills Maker](https://www.youtube.com/@ItSkillsMaker).
 
 Le programme refait le corrigé **comme sur une copie** : niveaux, dates au plus tôt (le maximum des prédécesseurs),
